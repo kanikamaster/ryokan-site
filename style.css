@@ -1,0 +1,264 @@
+/* 共通 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zen Antique", serif;
+}
+
+body {
+  max-width: 1600px;
+  background-color: #FAF7F0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* ここからヘッダー */
+header {
+  display: flex;
+  max-width: 1400px;
+  height: 80px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.tel {
+  margin-left: 160px;
+  letter-spacing: 4px;
+}
+
+.reserve {
+  margin-left: 480px;
+  padding: 16px 32px;
+  border-radius: 60px;
+  background-color: #B17457;
+}
+
+.reserve:hover {
+  color: #FAF7F0;
+  cursor: pointer;
+}
+
+header img {
+  margin-top: 24px;
+  margin-left: 240px;
+}
+
+/* ここからヒーローエリア */
+.hero-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-top: 16px;
+  margin-left: 160px;
+}
+
+ul {
+  list-style: none;
+  writing-mode: vertical-rl;
+  margin-top: -240px;
+  padding-left: 320px;
+  line-height: 56px;
+  letter-spacing: 12px;
+}
+
+li:hover {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.tower img {
+  border-radius: 20px;
+}
+
+/* ここからキャッチコピー */
+.copy {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.copy-text {
+  font-size: 18px;
+  font-weight: normal;
+  writing-mode: vertical-rl;
+  position: absolute;
+  letter-spacing: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 32px;
+}
+
+.copy-text p {
+  line-height: 80px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.copy img {
+  display: block;  
+  opacity: 0.3;
+  width: 100%;
+}
+
+/* ここから各紹介 */
+.container {
+   max-width: 1400px;
+   margin: 0 auto;
+   padding-bottom: 120px;
+}
+
+.menu {
+  max-height: 320px;
+  display: flex;
+  margin-top: 120px;
+}
+
+h2 {
+  position: relative;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 8px;
+  margin-top: 60px;
+  margin-left: 120px;
+}
+
+.menu-back {
+  position: absolute;
+}
+
+.intro {
+  padding: 0 40px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: 8px;
+  margin-top: 8px;
+}
+
+.intro p {
+  margin-top: 60px;
+  line-height: 48px;
+  letter-spacing: 4px;
+}
+
+.menu.reverse {
+  flex-direction: row-reverse;
+}
+
+.menu.reverse h2 {
+  margin-right: 80px;
+}
+
+.menu.reverse .menu-back {
+  margin-left: 80px;
+  width: 220px;
+}
+
+.info {
+  width: 800px;
+  text-align: center;
+}
+
+/* ここから予約フォームへの導線 */
+.form {
+  width: 60%;
+  padding: 80px 0;
+  text-align: center;
+  margin: 0 auto;
+  border: solid 2px #666;
+  position: relative;
+}
+
+.this {
+  position: relative;
+  padding-top: 80px;
+  letter-spacing: 20px;
+}
+
+.form img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notion {
+  margin-top: 100px;
+  letter-spacing: 8px;
+  font-size: 14px;
+  line-height: 36px;
+}
+
+.form span {
+  color: #FAF7F0;
+}
+
+.form span:hover {
+  cursor: pointer;
+}
+
+/* ここから旅館概要 */
+.announce {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  padding: 80px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  writing-mode: vertical-rl;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 16px;
+  margin-top: 24px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 8px;
+  padding: 40px;
+}
+
+.post {
+  margin-left: 54px;
+}
+
+.ad {
+  margin-left: 114px;
+}
+
+.call {
+  margin-left: 32px;
+}
+
+.address p {
+  padding: 20px 40px;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+/* ここからフッター */
+footer {
+  background-color: #4A4947;
+  height: 320px;
+  text-align: center;
+  padding-top: 140px;
+  color: #ccc;
+  letter-spacing: 4px;
+}
