@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>架空の旅館サイト</title>
+  <title>甲信州別館</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/ryokan-icon.jpg" type="image/x-icon">
+  <link rel="icon" href="img/favicon-ryokan.png" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <!-- ここからヘッダー -->
   <header>
-    <p class="tel">
-      甲信州別館 ☎000-000-0000</p>
-    <p class="reserve">ご予約はこちら</p>
-    <img src="img/menu-icon.png" alt="" width="56px" height="56px" class="menu-icon">
+    <p class="tel" id="scrollToTop" style="cursor: pointer;">
+      甲信州別館
+    </p>
+    <div class="header-right">
+    <a href="booking.html">
+      <p class="reserve booking">ご予約はこちら</p>
+    </a>
+      <img src="img/menu-icon.png" alt="メニューアイコン" class="menu-icon" id="menu-toggle">
+    </div>
+    <nav id="menu" style="display: none;">
+    <ul class="nav-ul">
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#room">お部屋</a></li>
+          <li><a href="#about">当旅館について</a></li>
+    </ul>
+  </nav>
   </header>
 
-  <!-- ここからヒーローエリア -->
+  <!-- ヒーローエリア -->
   <main>
     <div class="hero-area">
-      <div>
+      <div class="hero-logo">
         <img src="img/title-ryokan.jpg" width="450" height="650" class="title">
-        <ul>
+        <ul class="front-menu">
           <li><a href="#access">アクセス</a></li>
           <li><a href="#news">お知らせ</a></li>
           <li><a href="#room">お部屋</a></li>
@@ -32,11 +44,10 @@
         </ul>
       </div>
       <div class="tower">
-        <img src="img/tower.png" alt="" width="600px" height="700px">
+        <img src="img/tower.png" alt="建物の画像" width="700px" height="700px">
       </div>
     </div>
-
-    <!-- ここからキャッチコピー -->
+    <!-- キャッチコピー -->
     <div class="copy">
       <div class="copy-text">
         <p>
@@ -44,15 +55,14 @@
           心安らぐひとときを
         </p>
       </div>
-      <img src="img/forest.png" alt="">
+      <img src="img/forest.png" alt="森林の画像">
     </div>
-
-    <!-- ここから各紹介 -->
+    <!-- 各紹介 -->
     <div class="container">
       <div class="menu">
         <img src="img/subtitle.jpg" alt="各メニューの背景画像" width="240px" height="360px" class="menu-back">
         <h2 id="about">当旅館について</h2>
-        <img src="img/bath.png" alt="">
+        <img src="img/bath.png" alt="お風呂の画像" class="menu-img">
         <div class="intro">
           <h3>先代より受け継がれてきた、心づくのおもてなし</h3>
           <p>
@@ -62,11 +72,11 @@
           </p>
         </div>
       </div>
-
+      <!-- 2つ目 -->
       <div class="menu reverse">
         <img src="img/subtitle.jpg" alt="各メニューの背景画像" width="240px" height="360px" class="menu-back">
         <h2 id="room">お部屋</h2>
-        <img src="img/room.png" alt="">
+        <img src="img/room.png" alt="部屋の部屋"  class="menu-img">
         <div class="intro">
           <h3>本館と別館、趣の異なる和のしつらえ</h3>
           <p>
@@ -77,11 +87,11 @@
           </p>
         </div>
       </div>
-
+      <!-- 3つ目 -->
       <div class="menu">
-        <img src="img/subtitle.jpg" alt="各メニューの背景画像" width="240px"  height="360px" class="menu-back">
+        <img src="img/subtitle.jpg" alt="各メニューの背景画像" width="240px" height="360px" class="menu-back">
         <h2 id="news">お知らせ</h2>
-        <img src="img/food.png" alt="">
+        <img src="img/food.png" alt="料理の画像" class="menu-img">
         <div class="intro info">
           <p>
             2025/2/20 お料理の変更<br>
@@ -92,32 +102,37 @@
           </p>
         </div>
       </div>
-
+      <!-- 3つ目 -->
       <div class="menu reverse">
         <img src="img/subtitle.jpg" alt="各メニューの背景画像" width="240px" height="360px" class="menu-back">
         <h2 id="access">アクセス</h2>
-        <img src="img/forest.png" alt="" width="500px" height="353px">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207393.30194640672!2d138.42756138166237!3d35.68881088671966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bf850977851a9%3A0xc276c11755ca7309!2z5bGx5qKo55yM55Sy5bqc5biC!5e0!3m2!1sja!2sjp!4v1755181426133!5m2!1sja!2sjp" 
+          width="1500px" height="353" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="menu-img">
+          </iframe>
         <div class="intro">
           <h3>○○駅よりバスで〇分、徒歩〇分</h3>
-          <p>当館には公共交通機関をご利用のうえ、バスでのご来館をおすすめしております。
-            最寄りのバス停からは、徒歩約○分でお越しいただけます。
+          <p>当館には公共交通機関をご利用のうえ、バスでのご来館をおすすめしております。<br>
+            最寄りのバス停からは、徒歩約○分でお越しいただけます。<br>
             自然豊かな道を歩きながら、ゆったりとした時間をお楽しみください。</p>
         </div>
       </div>
     </div>
-
-    <!-- ここから予約フォームへの導線 -->
+    <!-- 予約フォームへの導線 -->
     <div class="form">
-      <img src="img/reserve.jpg" alt="" width="600px" height="180px">
-      <p class="this">ご予約は<span>こちら</span>から</p>
+      <div class="booking">
+        <a href="booking.html">
+        <img src="img/reserve.jpg" alt="予約フォームの背景画像" width="600px" height="180px">
+        <p class="this">ご予約は<span>こちら</span>から</p>
+        </a>
+      </div>
       <p class="notion">
         ご予約フォームに遷移します<br>
         直前のご予約はお電話(☎000-000-0000)にて<br>
         ご相談くださいませ
       </p>
     </div>
-
-    <!-- ここから旅館概要 -->
+    <!-- 旅館概要 -->
     <div class="announce">
       <h4>甲信州別館</h4>
       <div class="address">
@@ -134,9 +149,9 @@
     </div>
   </main>
 
-  <!-- ここからフッター -->
   <footer>
     <p>© 2025 甲信州別館 All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約ページ</title>
+  <link rel="icon" href="img/favicon-ryokan.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <ul class="info">
+      <li>日本語</li>
+      <li>ログイン</li>
+      <a href="index.html"><li>旅館TOPに戻る</li></a>
+    </ul>
+    <style>
+      body {
+        margin: 0;
+        background-color: #FAF7F0;
+      }
+      .info {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 24px;
+      }
+      li {
+        margin-right: 40px;
+        cursor: pointer;
+      }
+    </style>
+  </header>
+
+  <main>
+    <h1>甲信州別館</h1>
+    <ul class="serch">
+      <li>
+        チェックイン/チェックアウト
+        <input type="date">
+      </li>
+      <li>
+        <label for="guest">ご利用人数を選択</label>
+        <select id="guest" name="guest">
+          <option value="one">大人1名様</option>
+          <option value="two">大人2名様</option>
+          <option value="three">大人3名様</option>
+          <option value="four">大人4名様</option>
+        </select>
+      </li>
+      <li>
+        <label for="room">部屋数</label>
+        <select id="room" name="room">
+          <option value="one">1部屋</option>
+          <option value="two">2部屋</option>
+          <option value="three">3部屋</option>
+          <option value="four">4部屋</option>
+        </select>
+      </li>
+    </ul>
+    <div class="btn">
+      <button class="narrow">絞り込み</button>
+      <button>並べ替え</button>
+    </div>
+    <style>
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .serch {
+        list-style: none;
+        display: flex;
+        font-size: 18px;
+        width: 1000px;
+        margin: 0 auto;
+      }
+      input, select {
+        border-radius: 4px;
+        border: solid 1px #333;
+        padding: 12px;
+        margin-left: 8px;
+      }
+      .btn {
+        display: block;
+        text-align: center;
+        margin-top: 32px;
+      }
+      button {
+        border-radius: 4px;
+        border: solid 1px #333;
+        padding: 6px;
+        cursor: pointer;
+      }
+      .narrow {
+        margin-right: 24px;
+      }
+    </style>
+
+    <div>
+      <div class="plan">
+        <img src="img/room.png" alt="客室のイメージ画像" width="300px" height="200px">
+      <div>
+        <h2>特別懐石プラン ― 四季の恵みを堪能する贅沢なひととき</h2>
+        <p>
+          このプランでは、地元で採れた新鮮な食材を使用した贅沢な懐石料理をご提供。四季折々の食材をふんだんに使い、旬の味覚を最大限に引き立てた料理の数々は、まさに至高の体験。さらに、お部屋から望む絶景の山々や広がる大自然のパノラマに包まれながら、食事をお楽しみいただけます。特別なひとときを過ごすために選ばれた、格別なプランです。
+        </p>
+        <button class="book">予約する</button>
+      </div>
+      </div>
+      <div class="plan">
+        <img src="img/room.png" alt="客室のイメージ画像" width="300px" height="200px">
+        <div>
+        <h2> 極上和牛と地酒プラン ― 逸品の肉と選び抜かれた美酒</h2>
+        <p>
+          日本有数の銘柄和牛と、地元で醸造された厳選の地酒を堪能するプランです。肉質がとろけるように柔らかく、芳醇な風味の和牛を、焼き加減も最適に仕上げてお届けします。また、地元の酒蔵が誇る地酒を合わせて、味覚の調和をお楽しみいただけます。美しい景色を眺めながら、最高の食材とお酒で極上のひとときをお過ごしください。
+        </p>
+        <button class="book">予約する</button>
+        </div>
+        </div>
+      <div class="plan">
+        <img src="img/room.png" alt="客室のイメージ画像" width="300px" height="200px">
+        <div>
+        <h2>隠れ家個室プラン ― プライベート空間での極上ディナー</h2>
+        <p>
+          他のお客様との距離を保ち、完全なプライバシーを重視した隠れ家個室で、特別な夕食をご用意するプラン。お部屋には温かみのある和のインテリアが施され、落ち着いた雰囲気の中で、静かに食事をお楽しみいただけます。食材は全て、地元の契約農家から直送された新鮮なもののみを使用。個室ならではの静謐な空間で、贅沢なひとときをお過ごしください。
+        </p>
+        <button class="book">予約する</button>
+        </div>
+      </div>
+    </div>
+    <style>
+      .plan {
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: rgba(177,139,87,0.5)
+      }
+      h2 {
+        font-size: 18px;
+      }
+      h2, p {
+        margin-left: 16px;
+      }
+      .book {
+        margin-left: 400px;
+        background-color: #F26D55;
+        color: #fff;
+      } 
+
+      /* メディアクエリ */
+      @media (max-width: 1350px) {
+      .serch {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .serch li {
+        margin-bottom: 24px;
+      }
+      .plan {
+        display: block;
+        width: 80%;
+      }
+      .plan img {
+        display: flex;
+        margin: 0 auto;
+      }
+      .book {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+      }
+    }
+    </style>
+  </main>
+</html>

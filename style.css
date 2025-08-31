@@ -9,6 +9,11 @@
 body {
   max-width: 1600px;
   background-color: #FAF7F0;
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 80px;
 }
 
 a {
@@ -16,41 +21,62 @@ a {
   text-decoration: none;
 }
 
-/* ここからヘッダー */
+/* ヘッダー */
 header {
   display: flex;
-  max-width: 1400px;
   height: 80px;
-  margin: 0 auto;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #FAF7F0;
+  background-color: rgba(250, 247, 240, 0.8);
+  z-index: 1000;
+  justify-content: flex-start
+}
+
+.header-right {
+  position: relative;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
+}
+
+.header-right img {
+  width: 45px;
+  margin-left: 80px;
 }
 
 .tel {
-  margin-left: 160px;
-  letter-spacing: 4px;
+  margin-left: 60px;
+  letter-spacing: 20px;
 }
 
 .reserve {
-  margin-left: 480px;
   padding: 16px 32px;
   border-radius: 60px;
-  background-color: #B17457;
+  background-color: #F26D55;
+  border: 2px solid #F26D55;
+  color: #eee;
 }
 
 .reserve:hover {
-  color: #FAF7F0;
+  color: #000;
   cursor: pointer;
+  background-color: #eee;
+  background-color:  rgba(177,139,87,0.5);
+  border: 2px solid #000;
 }
 
-header img {
-  margin-top: 24px;
-  margin-left: 240px;
-}
-
-/* ここからヒーローエリア */
+/* ヒーローエリア */
 .hero-area {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .title {
@@ -76,7 +102,7 @@ li:hover {
   border-radius: 20px;
 }
 
-/* ここからキャッチコピー */
+/* キャッチコピー */
 .copy {
   height: 400px;
   position: relative;
@@ -101,22 +127,22 @@ li:hover {
 }
 
 .copy img {
-  display: block;  
+  display: block;
   opacity: 0.3;
   width: 100%;
 }
 
-/* ここから各紹介 */
+/* 各紹介 */
 .container {
-   max-width: 1400px;
-   margin: 0 auto;
-   padding-bottom: 120px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 120px;
 }
 
 .menu {
-  max-height: 320px;
   display: flex;
   margin-top: 120px;
+  width: 100%;
 }
 
 h2 {
@@ -136,6 +162,7 @@ h2 {
 
 .intro {
   padding: 0 40px;
+  width: 100%;
 }
 
 h3 {
@@ -169,7 +196,7 @@ h3 {
   text-align: center;
 }
 
-/* ここから予約フォームへの導線 */
+/* 予約フォームへの導線 */
 .form {
   width: 60%;
   padding: 80px 0;
@@ -183,6 +210,7 @@ h3 {
   position: relative;
   padding-top: 80px;
   letter-spacing: 20px;
+  font-size: 20px;
 }
 
 .form img {
@@ -203,11 +231,11 @@ h3 {
   color: #FAF7F0;
 }
 
-.form span:hover {
+.booking img:hover {
   cursor: pointer;
 }
 
-/* ここから旅館概要 */
+/* 旅館概要 */
 .announce {
   width: 1000px;
   margin: 0 auto;
@@ -253,7 +281,7 @@ h5 {
   letter-spacing: 4px;
 }
 
-/* ここからフッター */
+/* フッター */
 footer {
   background-color: #4A4947;
   height: 320px;
@@ -261,4 +289,180 @@ footer {
   padding-top: 140px;
   color: #ccc;
   letter-spacing: 4px;
+}
+
+.title, .copy-text, .front-menu, .intro {
+  display: none;
+}
+
+/* ハンバーガーメニュー */
+#menu-toggle {
+  cursor: pointer;
+  right: 10px;
+  z-index: 1001;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(74, 73, 71, 0.9);
+  width: 400px;
+  height: 100%;
+  z-index: 1000;
+}
+
+.nav-ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-ul li {
+  margin-bottom: 15px;
+}
+
+.nav-ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-ul a:hover {
+  text-decoration: underline;
+}
+
+/* メディアクエリ */
+@media (max-width: 1350px) {
+  .tower img {
+    width: 500px;
+  }
+
+  .hero-logo img,
+  .front-menu {
+    width: 400px;
+  }
+
+  .intro h3,
+  p {
+    font-size: 16px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menu-back {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .menu h2 {
+    width: 100px;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .menu-img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* 逆メニュー */
+  .menu.reverse {
+    display: block;
+  }
+
+  .menu.reserve img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .menu.reverse h2 {
+    width: 100px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  .menu.reverse .menu-back {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .intro h3 {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .intro {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .announce {
+    display: block;
+    width: 100%;
+  }
+  .address {
+    display: block;
+    flex-direction: row;
+    width: 80%;
+    border: solid 2px #666;
+    margin: 0 auto;
+  }
+  h4 {
+    writing-mode: horizontal-tb;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .tower img {
+    width: 350px;
+  }
+
+  .hero-logo img,
+  .front-menu {
+    width: 300px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-area {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tower img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+    .address h5, .address p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tel,
+  .reserve {
+    font-size: 16px;
+  }
+
+  .tel {
+    letter-spacing: 2px;
+  }
+
+  .copy-text p {
+    font-size: 12px;
+  }
+  .booking img {
+    width: 100%;
+  }
+  .this {
+    font-size: 12px;
+    letter-spacing: 8px;
+  }
 }
